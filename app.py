@@ -11,7 +11,7 @@ def smelting_form():
     if request.method == "POST":
         ore = request.form["ore"]
         belt = request.form["belt"]
-        belt_amount = request.form["belt_amount"]
+        belt_amount = request.form["belt_count"]
         furnace = request.form["furnace"]
         return f'received ore: {ore}'
     return render_template("smelting_form_HTML.html")
