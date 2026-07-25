@@ -102,7 +102,7 @@ def other_conditions(main_menu_callback, ore):
 def smelting_menu(main_menu_callback):
 
     print ("\n== Smelting Menu ==")
-    print ("what ore are you smelling?")
+    print ("what ore are you smelting?")
     print("1. Iron ore --> Iron plate \n2. Copper ore --> Copper plate")
     print ("3. Iron plate --> Steel plate \n4. Stone --> Stone brick \n5. Main Menu")
 

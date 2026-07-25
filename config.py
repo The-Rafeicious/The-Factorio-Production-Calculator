@@ -12,9 +12,9 @@ STONE_FURNACE_BASE_RATES = {
 }
 
 STEEL_ELECTRIC_FURNACE_BASE_RATES = {
-    "iron plate": 0.6525,
-    "copper plate": 0.6525,
-    "stone brick": 0.6525,
+    "iron plate": 0.625,
+    "copper plate": 0.625,
+    "stone brick": 0.625,
     "steel plate": 0.125,
 }
 
@@ -35,7 +35,7 @@ MODULE_STATS = {
     "speed1": {"speed": 0.20, "prod": 0},
     "speed2": {"speed": 0.30, "prod": 0},
     "speed3": {"speed": 0.50, "prod": 0},
-    "production1": {"speed": -0.5, "prod": 0.04},
+    "production1": {"speed": -0.05, "prod": 0.04},
     "production2": {"speed": -0.10, "prod": 0.06},
     "production3": {"speed": -0.15, "prod": 0.10}
 }

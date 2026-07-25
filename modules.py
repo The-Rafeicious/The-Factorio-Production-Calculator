@@ -40,7 +40,9 @@ def module_beacon_selection_menu(main_menu_callback, machine):
                 print ("Invalid input. Please enter a valid module type.")
 
         speed_stats = sum(MODULE_STATS[m]["speed"] for m in module_type_machine)
+        print (f"total speed stats: {speed_stats}%")
         prod_stats = sum(MODULE_STATS[m]["prod"] for m in module_type_machine)
+        print (f"total productivity stats: {prod_stats}%")
         if machine == "beacon":
             return speed_stats, module_type_machine
         return speed_stats, prod_stats, module_type_machine

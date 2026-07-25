@@ -4,7 +4,7 @@ from config import BELT_SPEEDS, STONE_FURNACE_BASE_RATES, STEEL_ELECTRIC_FURNACE
 from modules import module_selection_menu
 from math import ceil
 
-def smelting_menu_finally(main_menu_callback):
+#def smelting_menu_finally(main_menu_callback):
     print ("\n== Smelting Completed ==")
     choice = input("Do you want to return to the main menu? yes/no\n> ").strip().lower()
     if choice == "yes" or choice == "y" or choice == "menu":
@@ -15,7 +15,7 @@ def smelting_menu_finally(main_menu_callback):
         print ("Invalid choice. Please try again.")
         return smelting_menu_finally(main_menu_callback)
 
-def print_smelting_results(main_menu_callback, IMPORTANT_VALUES):
+#def print_smelting_results(main_menu_callback, IMPORTANT_VALUES):
 
     print ("\n== Furnace Calculations ===")
     if IMPORTANT_VALUES["module_choice"] == "without":
@@ -36,7 +36,7 @@ def print_smelting_results(main_menu_callback, IMPORTANT_VALUES):
         print (f"you will need: ")
     return smelting_menu_finally(main_menu_callback)
 
-def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
+#def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
 
     def ore_rate (IMPORTANT_VALUES):
         furnace = IMPORTANT_VALUES["furnace"]
@@ -60,7 +60,7 @@ def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
             return None
         return ORE_RATE, ORE_RATE_iron
 
-    def belt(IMPORTANT_VALUES):
+    #def belt(IMPORTANT_VALUES):
         items_pers = IMPORTANT_VALUES["ips"]
         belt_speed = IMPORTANT_VALUES["belt_speed"]
         furnace_needed = IMPORTANT_VALUES["furnace_needed"]
@@ -80,7 +80,7 @@ def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
         else:
             return None
 
-    def furnace_needed(main_menu_callback, IMPORTANT_VALUES):
+    #def furnace_needed(main_menu_callback, IMPORTANT_VALUES):
         ips = IMPORTANT_VALUES["ips"]
         ORE_RATE_output = ore_rate(IMPORTANT_VALUES)
         if ORE_RATE_output is None:
@@ -97,7 +97,7 @@ def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
 
         speed_stats, prod_stats, beacon_amount, beacon_speed_stats = module_choice.split()
 
-    def coal_usage(IMPORTANT_VALUES):
+    #def coal_usage(IMPORTANT_VALUES):
         furnace = IMPORTANT_VALUES["furnace"]
         furnace_needed = IMPORTANT_VALUES["furnace_needed"]
         ore = IMPORTANT_VALUES["ore"]
@@ -150,7 +150,7 @@ def furnace_calculations(main_menu_callback, IMPORTANT_VALUES):
 
     return print_smelting_results(main_menu_callback, IMPORTANT_VALUES)
 
-def other_conditions(main_menu_callback, ore):
+#def other_conditions(main_menu_callback, ore):
     def belt_choice():
         print ("\n== Belt Choice ==")
         print ("Can you enter what belt type you want to output.")
@@ -177,7 +177,7 @@ def other_conditions(main_menu_callback, ore):
         return items_per_second, belt
 
 
-    def furnace_choice():
+    #def furnace_choice():
         print ("\n== Furnace Choice ==")
         print ("Can you enter what furnace type you want to output.\nStone, Steel or Electric.")
         try:
@@ -211,7 +211,7 @@ def other_conditions(main_menu_callback, ore):
     return furnace_calculations(main_menu_callback, IMPORTANT_VALUES)
 
 
-def smelting_menu(main_menu_callback):
+#def smelting_menu(main_menu_callback):
 
     print ("\n== Smelting Menu ==")
     print ("what ore are you smelling?")
