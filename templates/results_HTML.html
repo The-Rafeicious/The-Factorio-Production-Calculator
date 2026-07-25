@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Results for smelting</h1>
+
+    <div>
+        <ul>
+            <li><strong>Ore:</strong> {{ results.ore }}</li>
+            <li><strong>Belts needed:</strong> {{ results.belt_needed }} {{ results.belt_name }} belt(s) at {{ results.ips_output }}/s</li>
+            <li><strong>Furnaces needed:</strong> {{ results.furnace_needed }} {{ results.furnace }} furnaces</li>
+            {% if results.coal_needed > 0 %}
+            <li><strong>Coal needed:</strong> {{ results.coal_needed }}</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% if results.iron_sub_recipe %}
+    <h3>Sub-section for Steel</h3>
+    <div>
+        <ul>
+            <li><strong>Ore:</strong> {{ results.iron_sub_recipe.ore }}</li>
+            <li><strong>Belts needed:</strong> {{ results.iron_sub_recipe.belt_needed }} {{ results.iron_sub_recipe.belt_name }} belt(s) at {{ results.iron_sub_recipe.ips_output }}/s</li>
+            <li><strong>Furnaces needed:</strong> {{ results.iron_sub_recipe.furnace_needed }} {{ results.iron_sub_recipe.furnace }} furnaces</li>
+            {% if results.iron_sub_recipe.coal_needed > 0 %}
+            <li><strong>Coal needed:</strong> {{ results.iron_sub_recipe.coal_needed }}</li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+
+</body>
+</html>

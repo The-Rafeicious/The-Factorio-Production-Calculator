@@ -47,3 +47,13 @@ BEACON_BUILTIN_AMOUNTS = {
     "high": "8",
     "max": "12",
 }
+
+MODULE_DEFAULTS = {
+            "speed_stats": 0,
+            "prod_stats": 0,
+            "beacon_amount": 0,
+            "beacon_speed_stats": 0,
+            "module_type_machine": [],
+            "module_type_beacon": [],
+            "module_beacon_choice": "without",
+        }

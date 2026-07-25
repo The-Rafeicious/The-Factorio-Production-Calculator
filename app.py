@@ -1,4 +1,8 @@
+from math import ceil
+
 from flask import Flask, render_template, request
+from config import BELT_SPEEDS
+from smelting_form_processing import smelting_form_base
 
 app = Flask(__name__)
 
@@ -9,11 +13,12 @@ def MainMenu():
 @app.route("/smelting-form", methods=["GET", "POST"])
 def smelting_form():
     if request.method == "POST":
-        ore = request.form["ore"]
-        belt = request.form["belt"]
-        belt_amount = request.form["belt_count"]
-        furnace = request.form["furnace"]
-        return f'received ore: {ore}'
+        raw_data = request.form
+
+        final_data = smelting_form_base(raw_data)
+
+        return render_template("results_HTML.html", results=final_data)
+
     return render_template("smelting_form_HTML.html")
 
 if __name__ == "__main__":

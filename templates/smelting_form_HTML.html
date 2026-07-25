@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <label for="ore">Select an ore</label>
-            <select id="ore" name="ore" required>
+            <select id="ore" name="ore_type" required>
                 <option value="" disabled selected>Select an ore</option>
                 <option value="iron plate">Iron ore --> Iron plate</option>
                 <option value="copper plate">Copper ore --> Copper plate</option>
@@ -24,7 +24,7 @@
 
         <div class="form-group">
             <label for="belt">Select a belt</label>
-            <select id="belt" name="belt" required>
+            <select id="belt" name="belt_type" required>
                 <option value="" disabled selected>Select a belt</option>
                 <option value="yellow">Yellow belt (15 i/s)</option>
                 <option value="red">Red belt (30 i/s)</option>
@@ -34,12 +34,12 @@
 
         <div class="form-group">
             <label for="belt_count">Enter belt amount</label>
-            <input type="number" id="belt_count" name="belt_count" min="1" required>
+            <input type="number" id="belt_count" name="belt_no" min="1" required>
         </div>
 
         <div class="form-group">
             <label for="furnace">Select a furnace</label>
-            <select id="furnace" name="furnace" required>
+            <select id="furnace" name="furnace_type" required>
                 <option value="" disabled selected>Select a furnace</option>
                 <option value="stone">Stone furnace</option>
                 <option value="steel">Steel furnace</option>
